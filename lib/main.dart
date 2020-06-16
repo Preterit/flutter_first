@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfirst/Image.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("主页"),
       ),
-      body: HomeContent(),
+      body: ImageState(),
     );
   }
 }
