@@ -33,8 +33,8 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("主页"),
       ),
-      body: TextWidget(),
-//      body: ImageState(),
+//      body: TextWidget(),
+      body: ImageWidget(),
     );
   }
 }
