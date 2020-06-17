@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfirst/GridViewWidget.dart';
 import 'package:flutterfirst/Image.dart';
 
 import 'ListView.dart';
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> {
       ),
 //      body: TextWidget(),
 //      body: ImageWidget(),
-      body: ListViewWidget(),
+      body: MyGridViewWidget(),
     );
   }
 }
