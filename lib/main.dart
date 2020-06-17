@@ -3,6 +3,7 @@ import 'package:flutterfirst/GridViewWidget.dart';
 import 'package:flutterfirst/Image.dart';
 import 'package:flutterfirst/PaddingWidget.dart';
 
+import 'ExPandedWidget.dart';
 import 'ListView.dart';
 import 'RowColumnWiget.dart';
 import 'TextContainer.dart';
@@ -41,7 +42,8 @@ class _HomePageState extends State<HomePage> {
 //      body: ImageWidget(),
 //      body: MyGridViewWidget(),
 //      body: PaddingWidgetTest(),
-      body: ColumnWiget(),
+//      body: ColumnWiget(),
+      body: ExpandedWidget(),
     );
   }
 }
