@@ -4,6 +4,7 @@ import 'package:flutterfirst/Image.dart';
 import 'package:flutterfirst/PaddingWidget.dart';
 
 import 'ListView.dart';
+import 'RowColumnWiget.dart';
 import 'TextContainer.dart';
 
 void main() => runApp(MyApp());
@@ -39,7 +40,8 @@ class _HomePageState extends State<HomePage> {
 //      body: TextWidget(),
 //      body: ImageWidget(),
 //      body: MyGridViewWidget(),
-      body: PaddingWidgetTest(),
+//      body: PaddingWidgetTest(),
+      body: ColumnWiget(),
     );
   }
 }
