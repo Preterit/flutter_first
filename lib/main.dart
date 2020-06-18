@@ -3,9 +3,11 @@ import 'package:flutterfirst/GridViewWidget.dart';
 import 'package:flutterfirst/Image.dart';
 import 'package:flutterfirst/PaddingWidget.dart';
 
+import 'AspectRatioWidget.dart';
 import 'ExPandedWidget.dart';
 import 'ListView.dart';
 import 'RowColumnWiget.dart';
+import 'StackWidget.dart';
 import 'TextContainer.dart';
 
 void main() => runApp(MyApp());
@@ -43,7 +45,10 @@ class _HomePageState extends State<HomePage> {
 //      body: MyGridViewWidget(),
 //      body: PaddingWidgetTest(),
 //      body: ColumnWiget(),
-      body: ExpandedWidget(),
+//      body: ExpandedWidget(),
+//      body: StackAndAlign(),
+//      body: StackAndPositioned(),
+      body: AspectratioWidget(),
     );
   }
 }
