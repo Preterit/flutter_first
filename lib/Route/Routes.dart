@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterfirst/Route/routes/FourPage.dart';
+import 'package:flutterfirst/Route/routes/SecondPage.dart';
+import 'package:flutterfirst/Route/routes/ThreePage.dart';
 
 import '../main.dart';
 import 'CategoryInfo.dart';
@@ -10,6 +13,9 @@ final routes = {
   "/": (context) => main(),
   '/categoryInfo': (context,{arguments}) => CategoryInfoPage(arguments:arguments),
   "/noDataPage": (context) => NoDataPageInfo(),
+  "/secondPage": (context) => SecondPage(),
+  "/threePage": (context) => ThreePage(),
+  "/fourPage": (context) => FourPage(),
 };
 
 /// 固定写法

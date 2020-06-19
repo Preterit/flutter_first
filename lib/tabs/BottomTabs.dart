@@ -5,14 +5,24 @@ import 'package:flutterfirst/tabs/pages/HomePage.dart';
 import 'package:flutterfirst/tabs/pages/SettingPage.dart';
 
 class BottomTabs extends StatefulWidget {
+
+  int index ;
+  BottomTabs({this.index = 0});
+
   @override
   _BottomNavigationBar createState() {
-    return _BottomNavigationBar();
+    return _BottomNavigationBar(this.index);
   }
 }
 
 class _BottomNavigationBar extends State<BottomTabs> {
-  int _currentIndex = 0;
+
+  int _currentIndex;
+
+  _BottomNavigationBar(index){
+    this._currentIndex = index;
+  }
+
   List<Widget> _pageList = [
     HomePage(),
     CategoryPage(),
