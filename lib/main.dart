@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterfirst/Route/Routes.dart' as prefix0;
 import 'package:flutterfirst/tabs/BottomTabs.dart';
 
 
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: BottomTabs(),
+      onGenerateRoute: prefix0.onGenerateRoute,
     );
   }
 }
