@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfirst/GridViewWidget.dart';
-import 'package:flutterfirst/Image.dart';
-import 'package:flutterfirst/PaddingWidget.dart';
+import 'package:flutterfirst/tabs/BottomTabs.dart';
 
-import 'AspectRatioWidget.dart';
-import 'CardWidget.dart';
-import 'ExPandedWidget.dart';
-import 'ListView.dart';
-import 'RowColumnWiget.dart';
-import 'StackWidget.dart';
-import 'StateFulWidgetTest.dart';
-import 'TextContainer.dart';
-import 'WrapWidget.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,29 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomePage(),
+      home: BottomTabs(),
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return _HomePageState();
-  }
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("主页"),
-      ),
 //      body: TextWidget(),
 //      body: ImageWidget(),
 //      body: MyGridViewWidget(),
@@ -54,7 +25,3 @@ class _HomePageState extends State<HomePage> {
 //      body: AspectratioWidget(),
 //      body: CardWidget(),
 //      body: WrapWidget(),
-      body: StateFulWidgetTest(),
-    );
-  }
-}
