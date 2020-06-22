@@ -19,48 +19,47 @@ class CustomAppbar extends StatelessWidget {
 //    Text('美食',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
 //    Text('美妆',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
+        child:
+            Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('猜你喜欢',
-          style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-    ),
+        child: Text('猜你喜欢',
+            style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('母婴',
-          style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-    ),
+        child:
+            Text('母婴', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('儿童',
-          style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-    ),
+        child:
+            Text('儿童', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
+        child:
+            Text('女装', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
+        child:
+            Text('百货', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
+        child:
+            Text('美食', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
+        child:
+            Text('美妆', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
+        child:
+            Text('母婴', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
+        child:
+            Text('儿童', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
+        child:
+            Text('女装', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
+        child:
+            Text('百货', style: TextStyle(color: Colors.green, fontSize: 16.0))),
     Tab(
-      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-    ),
-    Text('美妆',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+        child:
+            Text('美食', style: TextStyle(color: Colors.green, fontSize: 16.0))),
+    Tab(
+        child:
+            Text('美妆', style: TextStyle(color: Colors.green, fontSize: 16.0)))
   ];
 
   @override
@@ -76,7 +75,7 @@ class CustomAppbar extends StatelessWidget {
             ///设置导航右边图标的主题色，此时iconTheme对于右边图标颜色会失效
             actionsIconTheme: IconThemeData(color: Colors.blue, opacity: 0.6),
 
-            /// ///设置导航条上面的状态栏显示字体颜色
+            ///设置导航条上面的状态栏显示字体颜色
             brightness: Brightness.light,
 
             ///设置AppBar上面各种字体主题色
@@ -134,30 +133,14 @@ class CustomAppbar extends StatelessWidget {
   Widget _bottomTabs() {
     return TabBar(
       tabs: tabsList,
-
-      ///置未选中时的字体颜色，tabs里面的字体样式优先级最高
-      unselectedLabelColor: Colors.grey,
-
-      ///设置未选中时的字体样式，tabs里面的字体样式优先级最高
-      unselectedLabelStyle: TextStyle(fontSize: 20),
-
-      ///设置选中时的字体颜色，tabs里面的字体样式优先级最高
-      labelColor: Colors.black,
-
-      ///设置选中时的字体样式，tabs里面的字体样式优先级最高
-      labelStyle: TextStyle(fontSize: 20.0),
-
-      ///允许左右滚动
-      isScrollable: true,
-
-      ///选中下划线的颜色
-      indicatorColor: Colors.red,
-
-      ///选中下划线的长度，label时跟文字内容长度一样，tab时跟一个Tab的长度一样
-      indicatorSize: TabBarIndicatorSize.label,
-
-      ///选中下划线的高度，值越大高度越高，默认为2。0
-      indicatorWeight: 3.0,
+      unselectedLabelColor: Colors.grey,///置未选中时的字体颜色，tabs里面的字体样式优先级最高
+      unselectedLabelStyle: TextStyle(fontSize: 20),///设置未选中时的字体样式，tabs里面的字体样式优先级最高
+      labelColor: Colors.black,///设置选中时的字体颜色，tabs里面的字体样式优先级最高
+      labelStyle: TextStyle(fontSize: 20.0),///设置选中时的字体样式，tabs里面的字体样式优先级最高
+      isScrollable: true,///允许左右滚动
+      indicatorColor: Colors.red,///选中下划线的颜色
+      indicatorSize: TabBarIndicatorSize.label,///选中下划线的长度，label时跟文字内容长度一样，tab时跟一个Tab的长度一样
+      indicatorWeight: 3.0,///选中下划线的高度，值越大高度越高，默认为2。0
     );
   }
 
