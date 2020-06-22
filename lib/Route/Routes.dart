@@ -7,6 +7,7 @@ import 'package:flutterfirst/Route/routes/ThreePage.dart';
 import '../main.dart';
 import 'CategoryInfo.dart';
 import 'NoDataPageInfo.dart';
+import 'appbar/CusAppBarPage.dart';
 
 /// 配置路由
 final routes = {
@@ -16,6 +17,8 @@ final routes = {
   "/secondPage": (context) => SecondPage(),
   "/threePage": (context) => ThreePage(),
   "/fourPage": (context) => FourPage(),
+
+  "/customAppbar": (context) => CustomAppbar(),
 };
 
 /// 固定写法

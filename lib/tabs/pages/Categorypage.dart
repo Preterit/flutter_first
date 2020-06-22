@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterfirst/Route/RouteTest.dart';
 
 class CategoryPage extends StatefulWidget {
   @override
@@ -15,6 +16,14 @@ class _CategoryPageState extends State<CategoryPage> {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
+        RaisedButton(
+          child: Text("基本路由跳转"),
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+              return RouteTest(str: "HomePage");
+            }));
+          },
+        ),
         RaisedButton(
           child: Text("命名路由跳转 --- 携带参数"),
           onPressed: () {

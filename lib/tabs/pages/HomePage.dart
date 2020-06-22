@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterfirst/Route/RouteTest.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,20 +8,17 @@ class HomePage extends StatefulWidget {
   }
 }
 
-/// 基本路由
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
+    return ListView(
       children: <Widget>[
         RaisedButton(
-          child: Text("点击跳转"),
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-              return RouteTest(str: "HomePage");
-            }));
-          },
+          child: Text(
+            "自定义顶部导航",
+            textAlign: TextAlign.left,
+          ),
+          onPressed: () {Navigator.pushNamed(context, "/customAppbar");},
         ),
       ],
     );
