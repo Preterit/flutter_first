@@ -3,39 +3,161 @@ import 'package:flutter/material.dart';
 
 /// 自定义导航栏
 class CustomAppbar extends StatelessWidget {
+  List<Widget> tabsList = [
+//    Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+//    Text('猜你喜欢', style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('母婴',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('儿童',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('女装',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('百货',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('美食',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('美妆',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('母婴',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('儿童',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('女装',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('百货',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('美食',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+//    Text('美妆',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('猜你喜欢',
+          style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('母婴',
+          style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('儿童',
+          style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Tab(
+      child: Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
+    ),
+    Text('美妆',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black,opacity: 0.6),     ///设置导航栏图标颜色
-        actionsIconTheme: IconThemeData(color: Colors.blue,opacity: 0.6),   ///设置导航右边图标的主题色，此时iconTheme对于右边图标颜色会失效
-        brightness: Brightness.light,  ///设置导航条上面的状态栏显示字体颜色
-        textTheme: TextTheme( ///设置AppBar上面各种字体主题色
-            title: TextStyle(color: Colors.red,fontSize: 20.0,fontWeight:FontWeight.bold),
+    return MaterialApp(
+      home: DefaultTabController(
+        length: 14,
+        child: Scaffold(
+          appBar: AppBar(
+            ///设置导航栏图标颜色
+            iconTheme: IconThemeData(color: Colors.black, opacity: 0.6),
+
+            ///设置导航右边图标的主题色，此时iconTheme对于右边图标颜色会失效
+            actionsIconTheme: IconThemeData(color: Colors.blue, opacity: 0.6),
+
+            /// ///设置导航条上面的状态栏显示字体颜色
+            brightness: Brightness.light,
+
+            ///设置AppBar上面各种字体主题色
+            textTheme: TextTheme(
+              title: TextStyle(
+                  color: Colors.red,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold),
+            ),
+
+            /// 导航栏背景颜色
+            backgroundColor: Colors.orange,
+
+            /// 标题居中显示
+            centerTitle: true,
+            title: Text("自定义导航"),
+            actions: <Widget>[
+              IconButton(
+                icon: Icon(Icons.search),
+                tooltip: "Search",
+                onPressed: () {
+                  print("Search pressed");
+                },
+              ),
+              PopupMenuButton(
+                tooltip: "长按提示",
+                initialValue: "hot",
+                itemBuilder: _itemBuilder,
+                onSelected: _onSelected,
+              ),
+            ],
+            bottom: _bottomTabs(),
+          ),
+          body: TabBarView(children: [
+            Text('精选'),
+            Text('猜你喜欢'),
+            Text('母婴'),
+            Text('儿童'),
+            Text('女装'),
+            Text('百货'),
+            Text('美食'),
+            Text('美妆'),
+            Text('母婴'),
+            Text('儿童'),
+            Text('女装'),
+            Text('百货'),
+            Text('美食'),
+            Text('美妆'),
+          ]),
         ),
-        backgroundColor: Colors.lightGreen, /// 导航栏背景颜色
-        centerTitle: true,  /// 标题居中显示
-        title: Text("自定义导航"),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            tooltip: "Search",
-            onPressed: () {
-              print("Search pressed");
-            },
-          ),
-          PopupMenuButton(
-            tooltip: "长按提示",
-            initialValue: "hot",
-            padding: EdgeInsets.all(10.0),
-            itemBuilder: _itemBuilder,
-            onSelected: _onSelected,
-          ),
-        ],
       ),
-      body: Center(
-        child: Text("自定义导航"),
-      ),
+    );
+  }
+
+  Widget _bottomTabs() {
+    return TabBar(
+      tabs: tabsList,
+
+      ///置未选中时的字体颜色，tabs里面的字体样式优先级最高
+      unselectedLabelColor: Colors.grey,
+
+      ///设置未选中时的字体样式，tabs里面的字体样式优先级最高
+      unselectedLabelStyle: TextStyle(fontSize: 20),
+
+      ///设置选中时的字体颜色，tabs里面的字体样式优先级最高
+      labelColor: Colors.black,
+
+      ///设置选中时的字体样式，tabs里面的字体样式优先级最高
+      labelStyle: TextStyle(fontSize: 20.0),
+
+      ///允许左右滚动
+      isScrollable: true,
+
+      ///选中下划线的颜色
+      indicatorColor: Colors.red,
+
+      ///选中下划线的长度，label时跟文字内容长度一样，tab时跟一个Tab的长度一样
+      indicatorSize: TabBarIndicatorSize.label,
+
+      ///选中下划线的高度，值越大高度越高，默认为2。0
+      indicatorWeight: 3.0,
     );
   }
 
