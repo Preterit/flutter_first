@@ -43,6 +43,7 @@ class _BottomNavigationBar extends State<BottomTabs> {
       ),
       body: this._pageList[this._currentIndex],
       drawer: DrawerWidget(),
+      endDrawer: DrawerWidget(),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(

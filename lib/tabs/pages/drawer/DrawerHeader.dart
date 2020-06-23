@@ -44,7 +44,7 @@ class CusDrawHader extends StatelessWidget {
                                   color: Colors.white,
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.w600)),
-                          new Text("What's up",
+                          new Text("18614005205@163.com",
                               style: new TextStyle(
                                   fontSize: 14.0, color: Colors.white)),
                         ],

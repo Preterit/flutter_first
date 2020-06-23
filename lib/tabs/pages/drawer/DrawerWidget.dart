@@ -23,11 +23,7 @@ class DrawerWidget extends StatelessWidget {
           UserAccountsDrawerHeaderWidget(),
           ListTile(
             title: Text("用户空间"),
-            leading: CircleAvatar(
-                child: Icon(
-              Icons.more,
-              size: 20.0,
-            )),
+            leading: CircleAvatar(child: Icon(Icons.people)),
             onTap: _onTap,
           ),
           Divider(),
