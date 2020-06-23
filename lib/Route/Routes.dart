@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfirst/Route/routes/FourPage.dart';
 import 'package:flutterfirst/Route/routes/SecondPage.dart';
 import 'package:flutterfirst/Route/routes/ThreePage.dart';
+import 'package:flutterfirst/tabs/pages/drawer/UserCenterPage/UserCenterPage.dart';
 
 import '../main.dart';
 import 'CategoryInfo.dart';
@@ -19,6 +20,7 @@ final routes = {
   "/fourPage": (context) => FourPage(),
 
   "/customAppbar": (context) => CustomAppbar(),
+  "/userCenterPage": (context) => UserCenterPage(),  /// 用户中心
 };
 
 /// 固定写法

@@ -14,11 +14,16 @@ class _HomePageState extends State<HomePage> {
     return ListView(
       children: <Widget>[
         RaisedButton(
-          child: Text(
-            "自定义顶部导航",
-            textAlign: TextAlign.left,
-          ),
-          onPressed: () {Navigator.pushNamed(context, "/customAppbar");},
+          child: Text("自定义顶部导航"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/customAppbar");
+          },
+        ),
+        RaisedButton(
+          child: Text("侧边栏"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/customAppbar");
+          },
         ),
       ],
     );

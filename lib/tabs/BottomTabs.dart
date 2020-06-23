@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutterfirst/tabs/pages/Categorypage.dart';
 import 'package:flutterfirst/tabs/pages/HomePage.dart';
 import 'package:flutterfirst/tabs/pages/SettingPage.dart';
+import 'package:flutterfirst/tabs/pages/drawer/DrawerWidget.dart';
 
 class BottomTabs extends StatefulWidget {
+  int index;
 
-  int index ;
   BottomTabs({this.index = 0});
 
   @override
@@ -16,10 +17,9 @@ class BottomTabs extends StatefulWidget {
 }
 
 class _BottomNavigationBar extends State<BottomTabs> {
-
   int _currentIndex;
 
-  _BottomNavigationBar(index){
+  _BottomNavigationBar(index) {
     this._currentIndex = index;
   }
 
@@ -42,6 +42,7 @@ class _BottomNavigationBar extends State<BottomTabs> {
         title: Text("主页"),
       ),
       body: this._pageList[this._currentIndex],
+      drawer: DrawerWidget(),
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
