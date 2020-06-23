@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'CusAppBarWithDefaultTabController.dart';
+import 'CusAppBarWithTabController.dart';
 
 /// 自定义导航栏
 class CustomAppbar extends StatelessWidget {
@@ -45,11 +46,10 @@ class CustomAppbar extends StatelessWidget {
         title: Text("自定义AppBar"),
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: ListView(
         children: <Widget>[
-          Container(height: 400.0, child: FirstAppBar()),
+          Container(height: 300.0, child: FirstAppBar(), color: Colors.green),
+          Container(height: 400.0, child: SecondAppBar()),
         ],
       ),
     );
