@@ -4,62 +4,20 @@ import 'package:flutter/material.dart';
 /// 自定义导航栏
 class CustomAppbar extends StatelessWidget {
   List<Widget> tabsList = [
-//    Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0)),
-//    Text('猜你喜欢', style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('母婴',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('儿童',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('女装',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('百货',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('美食',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('美妆',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('母婴',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('儿童',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('女装',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('百货',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('美食',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-//    Text('美妆',style: TextStyle(color: Colors.indigoAccent, fontSize: 16.0)),
-    Tab(
-        child:
-            Text('精选', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child: Text('猜你喜欢',
-            style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('母婴', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('儿童', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('女装', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('百货', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('美食', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('美妆', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('母婴', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('儿童', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('女装', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('百货', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('美食', style: TextStyle(color: Colors.green, fontSize: 16.0))),
-    Tab(
-        child:
-            Text('美妆', style: TextStyle(color: Colors.green, fontSize: 16.0)))
+    Tab(text: '精选', icon: Icon(Icons.cast_connected)),
+    Tab(text: '猜你喜欢', icon: Icon(Icons.cast_connected)),
+    Tab(text: '母婴', icon: Icon(Icons.cast_connected)),
+    Tab(text: '儿童', icon: Icon(Icons.cast_connected)),
+    Tab(text: '女装', icon: Icon(Icons.cast_connected)),
+    Tab(text: '百货', icon: Icon(Icons.cast_connected)),
+    Tab(text: '美食', icon: Icon(Icons.cast_connected)),
+    Tab(text: '美妆', icon: Icon(Icons.cast_connected)),
+    Tab(text: '母婴', icon: Icon(Icons.cast_connected)),
+    Tab(text: '儿童', icon: Icon(Icons.cast_connected)),
+    Tab(text: '女装', icon: Icon(Icons.cast_connected)),
+    Tab(text: '百货', icon: Icon(Icons.cast_connected)),
+    Tab(text: '美食', icon: Icon(Icons.cast_connected)),
+    Tab(text: '美妆', icon: Icon(Icons.cast_connected))
   ];
 
   @override
@@ -133,14 +91,30 @@ class CustomAppbar extends StatelessWidget {
   Widget _bottomTabs() {
     return TabBar(
       tabs: tabsList,
-      unselectedLabelColor: Colors.grey,///置未选中时的字体颜色，tabs里面的字体样式优先级最高
-      unselectedLabelStyle: TextStyle(fontSize: 20),///设置未选中时的字体样式，tabs里面的字体样式优先级最高
-      labelColor: Colors.black,///设置选中时的字体颜色，tabs里面的字体样式优先级最高
-      labelStyle: TextStyle(fontSize: 20.0),///设置选中时的字体样式，tabs里面的字体样式优先级最高
-      isScrollable: true,///允许左右滚动
-      indicatorColor: Colors.red,///选中下划线的颜色
-      indicatorSize: TabBarIndicatorSize.label,///选中下划线的长度，label时跟文字内容长度一样，tab时跟一个Tab的长度一样
-      indicatorWeight: 3.0,///选中下划线的高度，值越大高度越高，默认为2。0
+      unselectedLabelColor: Colors.grey,
+
+      ///置未选中时的字体颜色，tabs里面的字体样式优先级最高
+      unselectedLabelStyle: TextStyle(fontSize: 13.0),
+
+      ///设置未选中时的字体样式，tabs里面的字体样式优先级最高
+      labelColor: Colors.black,
+
+      ///设置选中时的字体颜色，tabs里面的字体样式优先级最高
+      labelStyle: TextStyle(fontSize: 13.0),
+
+      ///设置选中时的字体样式，tabs里面的字体样式优先级最高
+      isScrollable: true,
+
+      ///允许左右滚动
+      indicatorColor: Colors.red,
+
+      ///选中下划线的颜色
+      indicatorSize: TabBarIndicatorSize.label,
+
+      ///选中下划线的长度，label时跟文字内容长度一样，tab时跟一个Tab的长度一样
+      indicatorWeight: 3.0,
+
+      ///选中下划线的高度，值越大高度越高，默认为2。0
     );
   }
 
