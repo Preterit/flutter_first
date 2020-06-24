@@ -167,7 +167,9 @@ class _CommonButtonsState extends State<CommonButtons> {
                 shape: StadiumBorder(),
               ),
             ],
-          )
+          ),
+          SizedBox(height: 20.0),
+          ButtonText("   ---FloatingActionButton---   ", textColor: Colors.orange),
         ],
       ),
     );

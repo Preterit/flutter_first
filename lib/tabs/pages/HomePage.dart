@@ -25,6 +25,12 @@ class _HomePageState extends State<HomePage> {
             Navigator.pushNamed(context, "/buttonWidget");
           },
         ),
+        RaisedButton(
+          child: Text("表单"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/textFields");
+          },
+        ),
       ],
     );
   }

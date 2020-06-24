@@ -31,6 +31,7 @@ class _ButtonWidgets extends State<ButtonWidget> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Button"),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             color: Colors.white,
