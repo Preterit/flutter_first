@@ -120,24 +120,60 @@ class _ButtonWidgets extends State<ButtonWidget> {
                     onPressed: _onPressed,
                     shape: CircleBorder(side: BorderSide(color: Colors.white))),
               ),
+              SizedBox(width: 10.0),
+              RaisedButton(
+                child: Text("半圆按钮"),
+                onPressed: _onPressed,
+                shape: StadiumBorder(),
+              )
             ],
           ),
           SizedBox(height: 10.0),
           ButtonText("   ---FlatButton---   ", textColor: Colors.orange),
-          FlatButton(
-            child: Text("平铺按钮"),
-            textColor: Colors.white,
-            color: Colors.blue,
-            onPressed: _onPressed,
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              FlatButton(
+                child: Text("平铺按钮"),
+                textColor: Colors.white,
+                color: Colors.blue,
+                onPressed: _onPressed,
+              ),
+              SizedBox(width: 10.0),
+              FlatButton(
+                child: Text("半圆按钮"),
+                textColor: Colors.white,
+                color: Colors.blue,
+                onPressed: _onPressed,
+                shape: StadiumBorder(),
+              ),
+            ],
           ),
           SizedBox(height: 10.0),
           ButtonText("   ---OutlineButton---   ", textColor: Colors.orange),
-          OutlineButton(
-            child: Text("带边框的按钮"),
-            textColor: Colors.grey,
-            onPressed: _onPressed,
-            highlightedBorderColor: Colors.lightGreen,
-          ),
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              OutlineButton(
+                child: Text("带边框的按钮"),
+                textColor: Colors.grey,
+                onPressed: _onPressed,
+                highlightedBorderColor: Colors.lightGreen,
+                borderSide: BorderSide(
+                  color: Colors.amber,
+                  width: 2.0,
+                ),
+              ),
+              SizedBox(width: 10.0),
+              OutlineButton(
+                child: Text("带边框的按钮"),
+                textColor: Colors.grey,
+                onPressed: _onPressed,
+                highlightedBorderColor: Colors.lightGreen,
+                shape: StadiumBorder(),
+              ),
+            ],
+          )
         ],
       ),
     );
