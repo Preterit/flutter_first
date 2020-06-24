@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 /// 自定以  DrawHeader
 class CusDrawHader extends StatelessWidget {
   @override
@@ -10,8 +9,9 @@ class CusDrawHader extends StatelessWidget {
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: NetworkImage("https://www.itying.com/images/flutter/1.png"),
-            fit: BoxFit.cover),
+          image: NetworkImage("https://www.itying.com/images/flutter/1.png"),
+          fit: BoxFit.cover,
+        ),
       ),
       child: Stack(
         children: <Widget>[

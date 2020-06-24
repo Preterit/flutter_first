@@ -20,9 +20,9 @@ class _HomePageState extends State<HomePage> {
           },
         ),
         RaisedButton(
-          child: Text("侧边栏"),
+          child: Text("按钮"),
           onPressed: () {
-            Navigator.pushNamed(context, "/customAppbar");
+            Navigator.pushNamed(context, "/buttonWidget");
           },
         ),
       ],
