@@ -22,14 +22,17 @@ class _FormPagesState extends State<FormPages> {
               child: Text("TextField演示"),
               onPressed: () {
                 Navigator.pushNamed(context, "/textFields");
-              }
-          ),
+              }),
           RaisedButton(
               child: Text("CheckBox演示"),
               onPressed: () {
                 Navigator.pushNamed(context, "/checkBoxPage");
-              }
-          ),
+              }),
+          RaisedButton(
+              child: Text("Radio演示"),
+              onPressed: () {
+                Navigator.pushNamed(context, "/radioPage");
+              }),
         ],
       ),
     );

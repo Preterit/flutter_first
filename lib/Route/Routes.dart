@@ -7,6 +7,7 @@ import 'package:flutterfirst/tabs/pages/button/Buttons.dart';
 import 'package:flutterfirst/tabs/pages/drawer/UserCenterPage/UserCenterPage.dart';
 import 'package:flutterfirst/tabs/pages/form/FormPage/CheckBoxPage.dart';
 import 'package:flutterfirst/tabs/pages/form/FormPage/LoginPage.dart';
+import 'package:flutterfirst/tabs/pages/form/FormPage/RadioPage.dart';
 import 'package:flutterfirst/tabs/pages/form/FormPage/TextFieldDemoPage.dart';
 import 'package:flutterfirst/tabs/pages/form/FormPages.dart';
 
@@ -31,6 +32,7 @@ final routes = {
   "/loginPage": (context) => LoginPage(),  /// 登陆
   "/checkBoxPage": (context) => CheckBoxPage(),  /// checkBox
   "/formPages": (context) => FormPages(),  /// FormPages
+  "/radioPage": (context) => RadioPage(),  /// RadioPage
 };
 
 /// 固定写法
