@@ -51,6 +51,7 @@ class _RadioPageState extends State<RadioPage> {
             selected: this.sex == 1,
             secondary: Icon(Icons.access_alarms),
           ),
+          Divider(),
           RadioListTile(
             value: 2,
             groupValue: this.sex,
@@ -60,6 +61,8 @@ class _RadioPageState extends State<RadioPage> {
             selected: this.sex == 2,
             secondary: Icon(Icons.access_alarms),
           ),
+          Divider(),
+          SizedBox(height: 30.0),
           new Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[Text("RadioListTile 选中了 ${this.sex == 1 ? '第一条' : '第二条'} ")],
