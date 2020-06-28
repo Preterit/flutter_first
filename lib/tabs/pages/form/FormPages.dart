@@ -33,6 +33,11 @@ class _FormPagesState extends State<FormPages> {
               onPressed: () {
                 Navigator.pushNamed(context, "/radioPage");
               }),
+          RaisedButton(
+              child: Text("Switch演示"),
+              onPressed: () {
+                Navigator.pushNamed(context, "/switchPage");
+              }),
         ],
       ),
     );
