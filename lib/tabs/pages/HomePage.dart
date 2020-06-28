@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         RaisedButton(
           child: Text("表单"),
           onPressed: () {
-            Navigator.pushNamed(context, "/textFields");
+            Navigator.pushNamed(context, "/formPages");
           },
         ),
       ],

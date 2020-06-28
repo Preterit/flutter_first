@@ -13,7 +13,7 @@ class _TextFieldsState extends State<TextFieldDemoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("表单演示"),
+        title: Text("TextField"),
         centerTitle: true,
       ),
       body: new Padding(
