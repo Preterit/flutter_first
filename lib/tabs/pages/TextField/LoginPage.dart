@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
             _nameIconColor = Colors.redAccent;
           } else {
             _errorText = null;
-            _nameIconColor = Colors.green;
+            _nameIconColor = Colors.greenAccent;
           }
         });
       }
@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
             _pwdIconColor = Colors.redAccent;
           } else {
             _pwdErrorText = null;
-            _pwdIconColor = Colors.green;
+            _pwdIconColor = Colors.greenAccent;
           }
         });
       }
@@ -118,7 +118,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromRGBO(233, 233, 233, 0.9),
+                      color: _nameIconColor,
                       width: 1.5,
                     ),
                   ),
@@ -170,7 +170,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(
-                      color: Color.fromRGBO(233, 233, 233, 0.9),
+                      color: _pwdIconColor,
                       width: 1.5,
                     ),
                   ),
