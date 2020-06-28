@@ -10,10 +10,15 @@ class CheckBoxPage extends StatefulWidget {
 
 class _CheckBoxState extends State<CheckBoxPage> {
   var flag = false;
+  var flag2 = false;
 
-  void _onChange(value) {
+  void _onChange(value, int type) {
     setState(() {
-      this.flag = value;
+      if (type == 1) {
+        this.flag = value;
+      } else {
+        this.flag2 = value;
+      }
     });
   }
 
@@ -28,15 +33,33 @@ class _CheckBoxState extends State<CheckBoxPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Checkbox(value: this.flag, onChanged: _onChange),
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text("男"),
+              Checkbox(
+                  value: this.flag,
+                  onChanged: (value) {
+                    _onChange(value, 1);
+                  }),
+              Text("女"),
+              Checkbox(
+                  value: this.flag2,
+                  onChanged: (value) {
+                    _onChange(value, 2);
+                  }),
+            ],
+          ),
           SizedBox(height: 10.0),
           Divider(),
           CheckboxListTile(
             value: this.flag,
-            onChanged: _onChange,
+            onChanged: (value) {
+              _onChange(value, 1);
+            },
             activeColor: Colors.orange,
-            checkColor: Colors.greenAccent,
             title: Text("CheckboxListTile"),
+            selected: this.flag,
             controlAffinity: ListTileControlAffinity.leading,
             subtitle: Text(
               "带标题的CheckBox",
@@ -50,24 +73,24 @@ class _CheckBoxState extends State<CheckBoxPage> {
           ),
           Divider(),
           CheckboxListTile(
-            value: this.flag,
-            onChanged: _onChange,
-            activeColor: Colors.orange,
-            checkColor: Colors.greenAccent,
+            value: this.flag2,
+            onChanged: (value) {
+              _onChange(value, 2);
+            },
+            selected: this.flag2,
             title: Text(
               "CheckboxListTile",
-              style: TextStyle(color: this.flag ? Colors.orange : Colors.black),
+              style: TextStyle(),
             ),
             controlAffinity: ListTileControlAffinity.trailing,
             subtitle: Text(
               "带标题的CheckBox",
               style: TextStyle(
-                  fontSize: 12.0,
-                  color: this.flag ? Colors.orange : Colors.grey),
+                fontSize: 12.0,
+              ),
             ),
             secondary: Icon(
               Icons.access_alarm,
-              color: this.flag ? Colors.orange : Colors.grey,
               size: 20.0,
               textDirection: TextDirection.rtl,
             ),
