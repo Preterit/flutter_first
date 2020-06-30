@@ -31,6 +31,12 @@ class _HomePageState extends State<HomePage> {
             Navigator.pushNamed(context, "/formPages");
           },
         ),
+        RaisedButton(
+          child: Text("日期/时间"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/dateDemoPage");
+          },
+        ),
       ],
     );
   }
