@@ -134,10 +134,12 @@ class _DateDemoPage extends State<DateDemoPage> {
   /// 日期选择
   void _selectDateMethod() async {
     var result = await showDatePicker(
-        context: context,
-        initialDate: _selectDate,
-        firstDate: DateTime(1998),
-        lastDate: DateTime(2100));
+      context: context,
+      initialDate: _selectDate,
+      firstDate: DateTime(1998),
+      lastDate: DateTime(2100),
+    );
+    if (result == null) return;
     setState(() {
       _selectDate = result;
     });
@@ -145,8 +147,11 @@ class _DateDemoPage extends State<DateDemoPage> {
 
   /// 时间选择
   void _selectTimeMethod() async {
-    var result =
-        await showTimePicker(context: context, initialTime: _selectTime);
+    var result = await showTimePicker(
+      context: context,
+      initialTime: _selectTime,
+    );
+    if (result == null) return;
     setState(() {
       _selectTime = result;
     });
