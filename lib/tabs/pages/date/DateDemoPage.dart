@@ -177,7 +177,75 @@ class _DateDemoPage extends State<DateDemoPage> {
                   ),
                 ],
               ),
-            )
+            ),
+            SizedBox(height: 20.0),
+            new Center(
+              widthFactor: double.infinity,
+              child: new Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "InkWell 组件使用",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+                  new Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text("基本使用:",
+                          style: TextStyle(
+                            color: Colors.deepOrangeAccent,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      SizedBox(width: 10.0),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 8.0, horizontal: 20.0),
+                          child: Text('这是InkWell点击效果'),
+                        ),
+                        highlightColor: Colors.red,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10.0),
+                  new Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text("边框处理:",
+                          style: TextStyle(
+                            color: Colors.deepOrangeAccent,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      SizedBox(width: 10.0),
+                      Ink(
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: Colors.cyanAccent),
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                          gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [Color(0xFFDE2F21), Color(0xFFEC592F)]),
+                        ),
+                        child: InkWell(
+                          onTap: () {},
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                vertical: 8.0, horizontal: 20.0),
+                            child: Text('这是InkWell点击效果',style: TextStyle(color: Colors.white),),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
