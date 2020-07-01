@@ -1,7 +1,9 @@
-
 import 'package:date_format/date_format.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_cupertino_date_picker/flutter_cupertino_date_picker.dart';
+
+import 'DateUtil.dart';
 
 /// 日期格式转换 系统默认 日期选择器，时间选择器。
 class DateDemoPage extends StatefulWidget {
@@ -14,6 +16,7 @@ class DateDemoPage extends StatefulWidget {
 class _DateDemoPage extends State<DateDemoPage> {
   DateTime _selectDate = DateTime.now();
   TimeOfDay _selectTime = TimeOfDay.now();
+  DateTime _pickerDate = DateTime.now();
 
   //创建时间对象，获取当前时间
   DateTime now = new DateTime.now();
@@ -97,7 +100,10 @@ class _DateDemoPage extends State<DateDemoPage> {
                       child: new Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text("日期选择"),
+                          Text("日期选择",
+                              style: TextStyle(
+                                  color: Colors.orange,
+                                  fontWeight: FontWeight.bold)),
                           SizedBox(width: 10.0),
                           Text(formatDate(
                               _selectDate, [yyyy, "-", mm, "-", dd])),
@@ -113,7 +119,10 @@ class _DateDemoPage extends State<DateDemoPage> {
                       child: new Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text("时间选择"),
+                          Text("时间选择",
+                              style: TextStyle(
+                                  color: Colors.orange,
+                                  fontWeight: FontWeight.bold)),
                           SizedBox(width: 10.0),
                           Text(_selectTime.format(context)),
                           Icon(Icons.arrow_drop_down)
@@ -123,10 +132,81 @@ class _DateDemoPage extends State<DateDemoPage> {
                   ],
                 )
               ],
+            ),
+            SizedBox(height: 50.0),
+            Container(
+              width: double.infinity,
+              child: new Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    "Flutter Cupertino Date Picker",
+                    style: TextStyle(
+                      color: Colors.orange,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10.0),
+                  new InkWell(
+                    child: new Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          formatDate(_pickerDate, [
+                            yyyy,
+                            "-",
+                            mm,
+                            "-",
+                            dd,
+                            " ",
+                            HH,
+                            ':',
+                            nn,
+                            ':',
+                            ss,
+                          ]),
+                          style: TextStyle(
+                            color: Colors.redAccent,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Icon(Icons.arrow_drop_down),
+                      ],
+                    ),
+                    onTap: _showDatePickerSelect,
+                  ),
+                ],
+              ),
             )
           ],
         ),
       ),
+    );
+  }
+
+  /// datePicker 底部弹框
+  void _showDatePickerSelect() {
+    DatePicker.showDatePicker(
+      context,
+      onMonthChangeStartWithFirstDate: true,
+      pickerTheme: DateTimePickerTheme(
+        showTitle: true,
+        confirm: Text('确认', style: TextStyle(color: Colors.red)),
+        cancel: Text('取消', style: TextStyle(color: Colors.red)),
+      ),
+      minDateTime: DateTime.parse('2010-05-12'),
+      maxDateTime: DateTime.parse('2021-11-25'),
+      initialDateTime: _pickerDate,
+      dateFormat: 'yyyy-MMM-dd  EEE , HH:mm:ss',
+      pickerMode: DateTimePickerMode.datetime,
+      locale: DateTimePickerLocale.zh_cn,
+      onClose: () => print("----- onClose -----"),
+      onCancel: () => print('onCancel'),
+      onConfirm: (dateTime, List<int> index) {
+        setState(() {
+          _pickerDate = dateTime;
+        });
+      },
     );
   }
 
@@ -153,60 +233,10 @@ class _DateDemoPage extends State<DateDemoPage> {
       initialTime: _selectTime,
     );
     if (result == null) return;
+
     /// 刷新数据
     setState(() {
       _selectTime = result;
     });
-  }
-
-  /* formatDate 使用案例 */
-  void printTime() {
-    print(
-        "1 --- " + formatDate(DateTime(1989, 2, 21), [yyyy, '-', mm, '-', dd]));
-    print("2 --- " + formatDate(DateTime(1989, 2, 21), [yy, '-', m, '-', dd]));
-    print("3 --- " + formatDate(DateTime(1989, 2, 1), [yy, '-', m, '-', d]));
-
-    print("4 --- " + formatDate(DateTime(1989, 2, 1), [yy, '-', MM, '-', d]));
-    print("5 --- " + formatDate(DateTime(1989, 2, 21), [yy, '-', M, '-', d]));
-
-    print("6 --- " + formatDate(DateTime(1989, 2, 1), [yy, '-', M, '-', d]));
-
-    print("7 --- " + formatDate(DateTime(2018, 1, 14), [yy, '-', M, '-', DD]));
-    print("8 --- " + formatDate(DateTime(2018, 1, 14), [yy, '-', M, '-', D]));
-
-    print("9 --- " +
-        formatDate(DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss]));
-
-    print("10 --- " +
-        formatDate(DateTime(1989, 02, 1, 15, 40, 10),
-            [hh, ':', nn, ':', ss, ' ', am]));
-
-    print("11 --- " +
-        formatDate(DateTime(1989, 02, 1, 15, 40, 10),
-            [hh, ':', nn, ':', ss, ' ', am]));
-
-    print("12 --- " + formatDate(DateTime(1989, 02, 1, 15, 40, 10), [hh]));
-    print("13 --- " + formatDate(DateTime(1989, 02, 1, 15, 40, 10), [h]));
-
-    print("14 --- " + formatDate(DateTime(1989, 02, 1, 5), [am]));
-    print("15 --- " + formatDate(DateTime(1989, 02, 1, 15), [am]));
-
-    print("16 --- " +
-        formatDate(
-            DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss, z]));
-
-    print("17 --- " +
-        formatDate(
-            DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss, ' ', Z]));
-
-    print("18 --- " + formatDate(DateTime(1989, 02, 21), [yy, ' ', w]));
-    print("19 --- " + formatDate(DateTime(1989, 02, 21), [yy, ' ', W]));
-
-    print("20 --- " + formatDate(DateTime(1989, 12, 31), [yy, '-W', W]));
-    print("21 --- " + formatDate(DateTime(1989, 1, 1), [yy, '-', mm, '-w', W]));
-
-    print("22 --- " +
-        formatDate(
-            DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss, ' ', Z]));
   }
 }
