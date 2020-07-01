@@ -12,6 +12,7 @@ import 'package:flutterfirst/tabs/pages/form/FormPage/RadioPage.dart';
 import 'package:flutterfirst/tabs/pages/form/FormPage/SwitchPage.dart';
 import 'package:flutterfirst/tabs/pages/form/FormPage/TextFieldDemoPage.dart';
 import 'package:flutterfirst/tabs/pages/form/FormPages.dart';
+import 'package:flutterfirst/tabs/pages/swiper/SwiperPage.dart';
 
 import '../main.dart';
 import 'CategoryInfo.dart';
@@ -37,6 +38,7 @@ final routes = {
   "/radioPage": (context) => RadioPage(),  /// RadioPage
   "/switchPage": (context) => SwitchPage(),  /// SwitchPage
   "/dateDemoPage": (context) => DateDemoPage(),  /// DateDemoPage
+  "/swiperPage": (context) => SwiperPage(),  /// 轮播图
 };
 
 /// 固定写法

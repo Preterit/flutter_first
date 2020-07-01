@@ -37,6 +37,12 @@ class _HomePageState extends State<HomePage> {
             Navigator.pushNamed(context, "/dateDemoPage");
           },
         ),
+        RaisedButton(
+          child: Text("轮播图--swiper"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/swiperPage");
+          },
+        ),
       ],
     );
   }
