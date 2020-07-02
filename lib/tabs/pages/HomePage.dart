@@ -49,6 +49,12 @@ class _HomePageState extends State<HomePage> {
             Navigator.pushNamed(context, "/dialogPage");
           },
         ),
+        RaisedButton(
+          child: Text("Dio 网络请求"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/dioPage");
+          },
+        ),
       ],
     );
   }

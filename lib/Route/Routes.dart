@@ -6,6 +6,7 @@ import 'package:flutterfirst/Route/routes/ThreePage.dart';
 import 'package:flutterfirst/tabs/pages/button/Buttons.dart';
 import 'package:flutterfirst/tabs/pages/date/DateDemoPage.dart';
 import 'package:flutterfirst/tabs/pages/dialog/DialogPage.dart';
+import 'package:flutterfirst/tabs/pages/dio/DioPage.dart';
 import 'package:flutterfirst/tabs/pages/drawer/UserCenterPage/UserCenterPage.dart';
 import 'package:flutterfirst/tabs/pages/form/FormPage/CheckBoxPage.dart';
 import 'package:flutterfirst/tabs/pages/form/FormPage/LoginPage.dart';
@@ -42,6 +43,7 @@ final routes = {
   "/swiperPage": (context) => SwiperPage(),  /// 轮播图
   "/dialogPage": (context) => DialogPage(),  /// Dialog
   "/alertDialog": (context) => AlertDialog(),  /// AlertDialog
+  "/dioPage": (context) => DioPage(),  /// DioPage
 };
 
 /// 固定写法
