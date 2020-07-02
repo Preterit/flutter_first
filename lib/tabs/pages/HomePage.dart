@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
     return ListView(
       children: <Widget>[
         RaisedButton(
-          child: Text("自定义顶部导航"),
+          child: Text("顶部导航"),
           onPressed: () {
             Navigator.pushNamed(context, "/customAppbar");
           },
@@ -41,6 +41,12 @@ class _HomePageState extends State<HomePage> {
           child: Text("轮播图--swiper"),
           onPressed: () {
             Navigator.pushNamed(context, "/swiperPage");
+          },
+        ),
+        RaisedButton(
+          child: Text("Dialog"),
+          onPressed: () {
+            Navigator.pushNamed(context, "/dialogPage");
           },
         ),
       ],
