@@ -36,14 +36,13 @@ class _DioPage extends State<DioPage> {
               child: Text("Dio 请求数据， 渲染数据演示"),
               onPressed: _decodeData,
             ),
-            new Container(
-              width: double.infinity,
-              height: 100.0,
-              child: Text(this._result),
-            ),
+            this._result.length > 0
+                ? new Expanded(
+                    child: Text(this._result),
+                  )
+                :SizedBox(height: 0.0),
             this._list.length > 0
-                ? Container(
-                    height: 300.0,
+                ? Expanded(
                     child: ListView.builder(
                       itemCount: 10,
                       itemBuilder: (context, index) {
@@ -54,7 +53,7 @@ class _DioPage extends State<DioPage> {
                       },
                     ),
                   )
-                : Text("加载中。。。。。")
+                : SizedBox(height: 0.0)
           ],
         ),
       ),
@@ -66,6 +65,7 @@ class _DioPage extends State<DioPage> {
     Response result = await Dio().get(apiUrl);
     setState(() {
       this._result = result.data;
+      this._list = [];
     });
   }
 
