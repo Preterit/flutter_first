@@ -1,8 +1,5 @@
-# flutterfirst
+# flutter 常用组件的属性 ， 以及 简单使用。
 
-哈哈哈
-
-## Getting Started
 # Container:容器
 
 <img src="./img/container1.png" style="zoom:50%;" />
